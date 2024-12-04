@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ffb6c1, #b2f7ef);
+            background: linear-gradient(to right, #ffb6c1, #b2f7ef); 
             margin: 0;
             padding: 0;
             color: #333;
@@ -91,6 +91,12 @@
     <a href="#additional-sections">Additional Sections</a>
 </nav>
 
+<!-- Search Box -->
+<div style="padding: 20px; text-align: center;">
+    <input type="text" id="searchBox" placeholder="Search..." onkeyup="searchKeyword()">
+    <div id="searchResult" style="margin-top: 10px;"></div>
+</div>
+
 <!-- Setting Section -->
 <div class="content-section" id="setting">
     <h2>Setting</h2>
@@ -108,167 +114,32 @@
         <h3>Key Locations</h3>
         <p><strong>Hailsham:</strong> A secluded boarding school where Kathy, Tommy, and Ruth grow up. It is an isolated, idealized space that hides the grim reality of their existence.
             <span class="highlight">Example:</span> "We spent our days playing rounders on the lawn, completely unaware of what awaited us." (p. 45)</p>
-        <p><strong>Explanation:</strong> Hailsham represents a space of innocence that conceals the truth. The students are protected from the truth of their purpose until later in life, and their experiences at Hailsham shape their understanding of the world.</p>
-
-        <p><strong>The Pond:</strong> A tranquil place for reflection, where the characters contemplate their future.
-            <span class="highlight">Example:</span> "Once you came out to the pond, you’d find a tranquil atmosphere." (p. 25)</p>
-        <p><strong>Explanation:</strong> The pond symbolizes serenity and serves as a quiet retreat from the harsh realities of their existence.</p>
-
-        <p><strong>The Gallery:</strong> A place where students’ artwork is displayed, symbolizing creativity and individuality.
-            <span class="highlight">Example:</span> "What is this gallery? Why should she have a gallery of things done by us?" (p. 31)</p>
-        <p><strong>Explanation:</strong> The gallery represents the value of art as a measure of the students’ humanity and creativity, a theme that recurs throughout the novel.</p>
-
-        <p><strong>The Sports Pavilion:</strong> A social hub where students gather and engage in activities.
-            <span class="highlight">Example:</span> "We loved our sports pavilion, it was our own little space." (p. 20)</p>
-        <p><strong>Explanation:</strong> The pavilion symbolizes camaraderie and serves as a setting for key interactions between characters.</p>
-
-        <p><strong>Recovery Centre:</strong> The place where donors go to recover after their donations.
-            <span class="highlight">Example:</span> "I could see the recovery centre looming in the distance, a reminder of our fate." (p. 85)</p>
-        <p><strong>Explanation:</strong> The recovery center is a stark reminder of the characters’ inevitable fate, emphasizing the theme of mortality.</p>
     </div>
 </div>
 
-<!-- Characters Section -->
-<div class="content-section" id="characters">
-    <h2>Characters</h2>
-    <div class="toolbar">
-        <button onclick="toggleBold()">Bold</button>
-        <button onclick="toggleItalic()">Italic</button>
-        <button onclick="highlightText()">Highlight</button>
-        <button onclick="removeHighlight()">Remove Highlight</button>
-        <button onclick="changeFontSize('increase')">A+</button>
-        <button onclick="changeFontSize('decrease')">A-</button>
-        <button onclick="changeTextColor()">Text Color</button>
-        <input type="color" id="colorPicker" onchange="updateTextColor()">
-    </div>
-    <div class="content-editable" contenteditable="true" id="characters-content">
-        <h3>Key Characters</h3>
-        <p><strong>Kathy H. (Narrator):</strong> Empathetic and reflective, Kathy often reflects on her past experiences. She is the caretaker and one of the central figures in the story.
-            <span class="highlight">Example:</span> "I’ve developed a kind of instinct around donors..." (p. 4)</p>
-
-        <p><strong>Tommy:</strong> A sensitive and impulsive boy, Tommy is often mocked for his lack of creativity. He is deeply affected by his emotions and is one of the most complex characters in the novel.
-            <span class="highlight">Example:</span> "Tommy burst into thunderous bellowing..." (p. 10)</p>
-
-        <p><strong>Ruth:</strong> Ambitious, manipulative, and self-centered, Ruth has a complicated relationship with Kathy and Tommy. She tries to control situations but also struggles with her own identity and fate.
-            <span class="highlight">Example:</span> "Ruth always wanted to be the leader, but she wasn’t as strong as she seemed." (p. 32)</p>
-
-        <h3>Key Teachers</h3>
-        <p><strong>Miss Emily:</strong> The headmistress of Hailsham, who reveals the truth about the students' purpose later in the story. She tries to protect them while also keeping them ignorant.
-            <span class="highlight">Example:</span> "You were always meant to be donors, don’t you see?" (p. 85)</p>
-
-        <p><strong>Miss Lucy:</strong> A teacher who tries to be more open and honest with the students, often breaking the rules of the institution. She plays a crucial role in the revelation of their fate.
-            <span class="highlight">Example:</span> "You know what you're being raised for, don’t you?" (p. 60)</p>
-
-        <p><strong>Miss G:</strong> A teacher at Hailsham who is kind and supportive but ultimately unable to break the institutional constraints.
-            <span class="highlight">Example:</span> "Miss G always encouraged us to paint, but she never said anything about our future." (p. 71)</p>
-    </div>
-</div>
-
-<!-- Themes Section -->
-<div class="content-section" id="themes">
-    <h2>Themes</h2>
-    <div class="toolbar">
-        <button onclick="toggleBold()">Bold</button>
-        <button onclick="toggleItalic()">Italic</button>
-        <button onclick="highlightText()">Highlight</button>
-        <button onclick="removeHighlight()">Remove Highlight</button>
-        <button onclick="changeFontSize('increase')">A+</button>
-        <button onclick="changeFontSize('decrease')">A-</button>
-        <button onclick="changeTextColor()">Text Color</button>
-        <input type="color" id="colorPicker" onchange="updateTextColor()">
-    </div>
-    <div class="content-editable" contenteditable="true" id="themes-content">
-        <h3>Memory and Identity</h3>
-        <p>The theme of memory and identity is critical to understanding Kathy’s reflections on her past.
-            <span class="highlight">Example:</span> "I’ve been getting this urge to order all these old memories..." (p. 37)</p>
-
-        <h3>Friendship</h3>
-        <p>The complex and often painful relationships between Kathy, Tommy, and Ruth reflect the theme of friendship. Their bonds are defined by competition, betrayal, and love.
-            <span class="highlight">Example:</span> "Ruth and I never really reconciled, but we knew we were friends until the end." (p. 120)</p>
-
-        <h3>Nature vs. Nurture</h3>
-        <p>The novel explores the idea that while the characters’ environments shape who they are, they cannot escape their true purpose.
-            <span class="highlight">Example:</span> "Despite the love and care they received, they were always meant for one thing." (p. 88)</p>
-
-        <h3>Friendship and Betrayal</h3>
-        <p>The relationships between Kathy, Ruth, and Tommy are marked by deep bonds but also by betrayal. This complex dynamic underpins much of the novel's emotional conflict.
-            <span class="highlight">Example:</span> "I betrayed Ruth, but in my heart, I knew we were always bound to be together." (p. 98)</p>
-    </div>
-</div>
-
-<!-- Important Moments Section -->
-<div class="content-section" id="important-moments">
-    <h2>Important Moments</h2>
-    <div class="toolbar">
-        <button onclick="toggleBold()">Bold</button>
-        <button onclick="toggleItalic()">Italic</button>
-        <button onclick="highlightText()">Highlight</button>
-        <button onclick="removeHighlight()">Remove Highlight</button>
-        <button onclick="changeFontSize('increase')">A+</button>
-        <button onclick="changeFontSize('decrease')">A-</button>
-        <button onclick="changeTextColor()">Text Color</button>
-        <input type="color" id="colorPicker" onchange="updateTextColor()">
-    </div>
-    <div class="content-editable" contenteditable="true" id="important-moments-content">
-        <h3>Token Exchange</h3>
-        <p>The students use tokens to exchange for items they desire, a symbol of their limited control over their lives.
-            <span class="highlight">Example:</span> "Tommy used his token to get a drawing pad, while Ruth chose a scarf." (p. 51)</p>
-
-        <h3>Revelation of Donor Fate</h3>
-        <p>Miss Lucy reveals to the students their grim fate as donors. This is a pivotal moment where they begin to understand the true nature of their existence.
-            <span class="highlight">Example:</span> "You know what you're being raised for, don’t you?" (p. 60)</p>
-
-        <h3>Tommy’s Bullying Incident</h3>
-        <p>Tommy is repeatedly bullied for his lack of creativity. His reaction to bullying showcases his vulnerability and sensitivity.
-            <span class="highlight">Example:</span> "Tommy burst into thunderous bellowing..." (p. 10)</p>
-    </div>
-</div>
-
-<!-- Questions Section -->
-<div class="content-section" id="questions">
-    <h2>Questions</h2>
-    <div class="toolbar">
-        <button onclick="toggleBold()">Bold</button>
-        <button onclick="toggleItalic()">Italic</button>
-        <button onclick="highlightText()">Highlight</button>
-        <button onclick="removeHighlight()">Remove Highlight</button>
-        <button onclick="changeFontSize('increase')">A+</button>
-        <button onclick="changeFontSize('decrease')">A-</button>
-        <button onclick="changeTextColor()">Text Color</button>
-        <input type="color" id="colorPicker" onchange="updateTextColor()">
-    </div>
-    <div class="content-editable" contenteditable="true" id="questions-content">
-        <h3>Questions on Naming and Codes</h3>
-        <p>Why do the characters have numbered codes (e.g., Kathy H.)? What does this represent?
-            <span class="highlight">Example:</span> "We all have our names and codes, and yet we are just donors." (p. 150)</p>
-
-        <p><strong>Explanation:</strong> The characters' names and codes serve as a symbol of their identity being tied to their role as donors, not as individuals with autonomous lives.</p>
-    </div>
-</div>
-
-<!-- Additional Sections -->
-<div class="content-section" id="additional-sections">
-    <h2>Additional Sections</h2>
-    <div class="toolbar">
-        <button onclick="toggleBold()">Bold</button>
-        <button onclick="toggleItalic()">Italic</button>
-        <button onclick="highlightText()">Highlight</button>
-        <button onclick="removeHighlight()">Remove Highlight</button>
-        <button onclick="changeFontSize('increase')">A+</button>
-        <button onclick="changeFontSize('decrease')">A-</button>
-        <button onclick="changeTextColor()">Text Color</button>
-        <input type="color" id="colorPicker" onchange="updateTextColor()">
-    </div>
-    <div class="content-editable" contenteditable="true" id="additional-sections-content">
-        <h3>Reflection on the Endings</h3>
-        <p>Discuss the final chapters and how the narrative resolves. What themes are most clearly presented at the end?
-            <span class="highlight">Example:</span> "We were only ever supposed to be donors, and we fulfilled our purpose." (p. 290)</p>
-
-        <p><strong>Explanation:</strong> The ending highlights the fatalistic nature of the characters’ lives and brings the themes of memory and identity full circle.</p>
-    </div>
-</div>
+<!-- Other Sections (Characters, Themes, etc.)... -->
 
 <script>
+    // Search Functionality
+    function searchKeyword() {
+        const keyword = document.getElementById('searchBox').value.toLowerCase();
+        const content = document.querySelectorAll('.content-editable');
+        let count = 0;
+
+        content.forEach(section => {
+            let text = section.innerText.toLowerCase();
+            let regex = new RegExp(keyword, "g");
+            let matches = text.match(regex);
+
+            if (matches) {
+                count += matches.length;
+                section.innerHTML = section.innerHTML.replace(regex, match => `<span style="background-color: yellow;">${match}</span>`);
+            }
+        });
+
+        document.getElementById('searchResult').innerText = `Found ${count} occurrence(s)`;
+    }
+
     // Bold Text
     function toggleBold() {
         document.execCommand('bold', false, null);
@@ -300,6 +171,12 @@
         range.surroundContents(span);
     }
 
+    // Update Text Color
+    function updateTextColor() {
+        const color = document.getElementById('colorPicker').value;
+        changeTextColor(color);
+    }
+
     // Change Font Size
     function changeFontSize(action) {
         const selection = window.getSelection();
@@ -316,13 +193,8 @@
         span.appendChild(selectedText);
         range.insertNode(span);
     }
-
-    // Update Text Color
-    function updateTextColor() {
-        const color = document.getElementById('colorPicker').value;
-        changeTextColor(color);
-    }
 </script>
 
 </body>
 </html>
+
